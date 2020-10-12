@@ -34,6 +34,20 @@ def histogram(sentence: str) -> tuple:
 
     #trop pas clair ce quil faut faire
 
+def valide(adn: str):
+    if len(adn) == 0: return False
+
+    for i in adn:
+        if i == "u" or i == "g" or i == "t" or i =="c":
+            bool = True
+        else: return False
+    return bool
+
+
+
+
+
+
 
 
 if __name__ == '__main__':
@@ -42,3 +56,7 @@ if __name__ == '__main__':
     print(calculer_masse_volume(2, 3, 4, 5))
     print(calculer_masse_volume(2, 6, 7.7, 23.8))
     print(histogram("jaime les tomates"))
+    print(valide(""))
+    print(valide("ugtc"))
+    print(valide("ugtcugg gtcu"))
+    print(valide("ugtcrugggtcu"))
