@@ -34,6 +34,15 @@ def histogram(sentence: str) -> tuple:
 
     #trop pas clair ce quil faut faire
 
+
+def arbre():
+    turtle.forward(200)
+    turtle.right(25)
+    turtle.forward(200)
+    turtle.left(25)
+
+
+
 def valide(adn: str):
     if len(adn) == 0: return False
 
@@ -43,6 +52,14 @@ def valide(adn: str):
         else: return False
     return bool
 
+def saisi(phrase: str):
+    if valide(phrase):
+        return str
+    else: return False
+
+def proportion (chaine: str , sequence: str):
+    proportion = (chaine.count(sequence)/len(chaine)) * 100
+    return f'Il y a {proportion}% de "{sequence}".'
 
 
 
@@ -52,11 +69,15 @@ def valide(adn: str):
 
 if __name__ == '__main__':
     # TODO: Appelez vos fonctions ici
-    print(calculer_masse_volume())
-    print(calculer_masse_volume(2, 3, 4, 5))
-    print(calculer_masse_volume(2, 6, 7.7, 23.8))
-    print(histogram("jaime les tomates"))
-    print(valide(""))
-    print(valide("ugtc"))
-    print(valide("ugtcugg gtcu"))
-    print(valide("ugtcrugggtcu"))
+
+    print(arbre())
+    # print(calculer_masse_volume())
+    # print(calculer_masse_volume(2, 3, 4, 5))
+    # print(calculer_masse_volume(2, 6, 7.7, 23.8))
+    # print(histogram("jaime les tomates"))
+    # print(valide(""))
+    # print(valide("ugtc"))
+    # print(valide("ugtcugg gtcu"))
+    # print(valide("ugtcrugggtcu"))
+    #
+    # print(proportion("ugtcatgctaug", "ug"))
